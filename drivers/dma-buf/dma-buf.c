@@ -19,6 +19,7 @@
  * more details.
  *
  * You should have received a copy of the GNU General Public License along with
+ * You should have received a copy of the GNU General Public License along with
  * this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
@@ -108,7 +109,7 @@ static void dma_buf_release(struct dentry *dentry)
 	int dtor_ret = 0;
 
 	dmabuf = dentry->d_fsdata;
-
+	
 	spin_lock(&dentry->d_lock);
 	dentry->d_fsdata = NULL;
 	spin_unlock(&dentry->d_lock);
@@ -154,10 +155,10 @@ static const struct dentry_operations dma_buf_dentry_ops = {
 static struct vfsmount *dma_buf_mnt;
 
 static struct dentry *dma_buf_fs_mount(struct file_system_type *fs_type,
-		int flags, const char *name, void *data)
+	int flags, const char *name, void *data)
 {
 	return mount_pseudo(fs_type, "dmabuf:", NULL, &dma_buf_dentry_ops,
-			DMA_BUF_MAGIC);
+		DMA_BUF_MAGIC);
 }
 
 static struct file_system_type dma_buf_fs_type = {
