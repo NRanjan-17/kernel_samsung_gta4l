@@ -28,6 +28,11 @@ LINUXINCLUDE    += \
 		-include $(srctree)/techpack/camera/config/bengalcameraconf.h
 endif
 
+ifeq ($(CONFIG_GTA4L_DTB), y)
+LINUXINCLUDE    += \
+		-include $(srctree)/techpack/camera-bengal/config/legacycameraconf.h
+endif
+
 ifdef CONFIG_SPECTRA_CAMERA
 # Use USERINCLUDE when you must reference the UAPI directories only.
 USERINCLUDE     += \

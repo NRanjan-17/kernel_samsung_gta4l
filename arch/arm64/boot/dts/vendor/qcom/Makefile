@@ -137,7 +137,7 @@ dtb-$(CONFIG_ARCH_LAGOON) += \
 endif
 
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
-        dtbo-$(CONFIG_ARCH_BENGAL) += \
+        dtbo-$(CONFIG_GTA4L_DTB) += \
 		P85946-qrd-overlay.dtbo
 
 bengal-rumi-overlay.dtbo-base := bengal.dtb

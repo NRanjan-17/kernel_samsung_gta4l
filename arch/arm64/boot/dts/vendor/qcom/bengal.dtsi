@@ -15984,7 +15984,7 @@
 		ope0_all_rd = "/soc/qcom,cam-cpas@5c11000/camera-bus-nodes/level0-nodes/ope0-all-rd";
 		tfe0_all_wr = "/soc/qcom,cam-cpas@5c11000/camera-bus-nodes/level0-nodes/tfe0-all-wr";
 		tfe1_all_wr = "/soc/qcom,cam-cpas@5c11000/camera-bus-nodes/level0-nodes/tfe1-all-wr";
-		tfe2_all_wr = "/soc/qcom,cam-cpas@5c11000/camera-b+us-nodes/level0-nodes/tfe2-all-wr";
+		tfe2_all_wr = "/soc/qcom,cam-cpas@5c11000/camera-bus-nodes/level0-nodes/tfe2-all-wr";
 		cpas_cdm0_all_rd = "/soc/qcom,cam-cpas@5c11000/camera-bus-nodes/level0-nodes/cpas-cdm0-all-rd";
 		ope_cdm0_all_rd = "/soc/qcom,cam-cpas@5c11000/camera-bus-nodes/level0-nodes/ope-cdm0-all-rd";
 		cam_cpas_cdm = "/soc/qcom,cpas-cdm0@5c23000";

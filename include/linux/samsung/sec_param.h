@@ -28,11 +28,7 @@ struct sec_param_data {
 	unsigned int reserved1;
 	unsigned int cp_debuglevel;
 	unsigned int reserved2;
-#ifdef CONFIG_RTC_AUTO_PWRON_PARAM
-	unsigned int sapa[3];
-#else
 	unsigned int reserved3[3];
-#endif
 #ifdef CONFIG_SEC_MONITOR_BATTERY_REMOVAL
 	unsigned int normal_poweroff;
 #else
@@ -98,9 +94,6 @@ enum sec_param_index {
 	param_index_uartsel,
 	param_rory_control,
 	param_cp_debuglevel,
-#ifdef CONFIG_RTC_AUTO_PWRON_PARAM
-	param_index_sapa,
-#endif
 #ifdef CONFIG_SEC_MONITOR_BATTERY_REMOVAL
 	param_index_normal_poweroff,
 #endif

@@ -185,11 +185,6 @@ bool sec_get_param(enum sec_param_index index, void *value)
 		__memcpy_t(unsigned int,
 				value, &(param_data->rory_control));
 		break;
-#ifdef CONFIG_RTC_AUTO_PWRON_PARAM
-	case param_index_sapa:
-		memcpy(value, param_data->sapa, sizeof(param_data->sapa));
-		break;
-#endif
 #ifdef CONFIG_WIRELESS_IC_PARAM
 	case param_index_wireless_ic:
 		memcpy(value, &(param_data->wireless_ic), sizeof(unsigned int));
@@ -303,13 +298,6 @@ bool sec_set_param(enum sec_param_index index, void *value)
 		__memcpy_t(unsigned int,
 				&(param_data->rory_control), value);
 		break;
-#ifdef CONFIG_RTC_AUTO_PWRON_PARAM
-	case param_index_sapa:
-		if (*(unsigned int*)value == (unsigned int)SAPA_KPARAM_MAGIC) {
-			memcpy(param_data->sapa, value, sizeof(param_data->sapa));
-		}
-		break;
-#endif
 #ifdef CONFIG_SEC_MONITOR_BATTERY_REMOVAL
 	case param_index_normal_poweroff:
 		__memcpy_t(unsigned int,
