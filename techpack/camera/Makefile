@@ -30,7 +30,7 @@ endif
 
 ifeq ($(CONFIG_GTA4L_DTB), y)
 LINUXINCLUDE    += \
-		-include $(srctree)/techpack/camera-bengal/config/legacycameraconf.h
+		-include $(srctree)/techpack/camera/config/legacycameraconf.h
 endif
 
 ifdef CONFIG_SPECTRA_CAMERA
